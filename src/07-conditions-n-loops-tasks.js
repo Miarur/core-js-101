@@ -73,9 +73,9 @@ function getFactorial(n) {
  *   -1,1  =>  0  ( = -1 + 0 + 1 )
  */
 function getSumBetweenNumbers(n1, n2) {
-  const a = n2 - n1 + 1;
-  const b = (n1 + n2) / 2;
-  return a * b;
+  const first = n2 - n1 + 1;
+  const second = (n1 + n2) / 2;
+  return first * second;
 }
 
 /**

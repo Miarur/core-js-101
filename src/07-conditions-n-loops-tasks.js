@@ -222,8 +222,8 @@ function getIntervalString(/* a, b, isStartIncluded, isEndIncluded */) {
  * 'rotator' => 'rotator'
  * 'noon' => 'noon'
  */
-function reverseString(/* str */) {
-  throw new Error('Not implemented');
+function reverseString(str) {
+  return str.split('').reverse().join('');
 }
 
 /**
@@ -238,8 +238,9 @@ function reverseString(/* str */) {
  *   87354 => 45378
  *   34143 => 34143
  */
-function reverseInteger(/* num */) {
-  throw new Error('Not implemented');
+function reverseInteger(num) {
+  const res = num.toString().split('').reverse().join('');
+  return parseFloat(res);
 }
 
 /**
@@ -280,8 +281,11 @@ function isCreditCardNumber(/* ccn */) {
  *   10000 ( 1+0+0+0+0 = 1 ) => 1
  *   165536 (1+6+5+5+3+6 = 26,  2+6 = 8) => 8
  */
-function getDigitalRoot(/* num */) {
-  throw new Error('Not implemented');
+function getDigitalRoot(num) {
+  const myArr = String(num).split('').map((item) => Number(item));
+  const sum = myArr.reduce((acc, item) => acc + item);
+  const res = String(sum).split('').map((item) => Number(item));
+  return res.reduce((acc, item) => acc + item);
 }
 
 /**
